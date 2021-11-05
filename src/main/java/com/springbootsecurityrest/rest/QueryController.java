@@ -49,7 +49,7 @@ public class QueryController {
         String createQueryInfo = DBService.createQuery(user_id, header, body, date);
         return createQueryInfo;
     }
-    @GetMapping(path = "/updquery", produces = MediaType.APPLICATION_JSON_VALUE)
+    @PostMapping(path = "/updquery", produces = MediaType.APPLICATION_JSON_VALUE)
     public String updQuery (@RequestBody String query) throws JSONException, FileNotFoundException, SQLException {
         JSONArray jsonArray = new JSONArray(query);
         JSONObject obj = jsonArray.getJSONObject(0);

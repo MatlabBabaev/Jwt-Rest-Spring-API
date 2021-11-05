@@ -3,6 +3,7 @@ package com.springbootsecurityrest.services;
 import com.springbootsecurityrest.model.User;
 import com.springbootsecurityrest.resources.UserRepository;
 import com.sun.jdi.request.ThreadStartRequest;
+import org.mindrot.jbcrypt.BCrypt;
 import org.springframework.security.core.GrantedAuthority;
 import org.springframework.security.core.context.SecurityContextHolder;
 import org.springframework.security.core.userdetails.UserDetails;
@@ -52,5 +53,20 @@ public class UserService implements UserDetailsService {
             throw new UsernameNotFoundException(String.format("User %s is not found", login));
         }
         return new org.springframework.security.core.userdetails.User(u.getLogin(), u.getPassword(), true, true, true, true, new HashSet<>());
+    }
+
+    public String hashPassword(String plainTextPassword){
+        return BCrypt.hashpw(plainTextPassword, BCrypt.gensalt());
+    }
+    private boolean checkPass(String plainPassword, String hashedPassword) {
+        if (BCrypt.checkpw(plainPassword, hashedPassword)){
+            System.out.println("The password matches.");
+            return true;
+        }
+
+        else{
+            System.out.println("The password does not match.");
+            return false;
+        }
     }
 }
