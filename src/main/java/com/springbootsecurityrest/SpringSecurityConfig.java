@@ -12,6 +12,7 @@ import org.springframework.security.config.annotation.web.builders.HttpSecurity;
 import org.springframework.security.config.annotation.web.configuration.EnableWebSecurity;
 import org.springframework.security.config.annotation.web.configuration.WebSecurityConfigurerAdapter;
 import org.springframework.security.config.http.SessionCreationPolicy;
+import org.springframework.security.crypto.bcrypt.BCryptPasswordEncoder;
 import org.springframework.security.crypto.password.NoOpPasswordEncoder;
 import org.springframework.security.crypto.password.PasswordEncoder;
 import org.springframework.security.web.csrf.CsrfFilter;
@@ -31,9 +32,13 @@ public class SpringSecurityConfig extends WebSecurityConfigurerAdapter {
     @Qualifier("handlerExceptionResolver")
     private HandlerExceptionResolver resolver;
 
-    @Bean
+    /*@Bean
     public PasswordEncoder devPasswordEncoder() {
         return NoOpPasswordEncoder.getInstance();
+    }*/
+    @Bean
+    public PasswordEncoder devPasswordEncoder() {
+        return new BCryptPasswordEncoder();
     }
 
     @Override

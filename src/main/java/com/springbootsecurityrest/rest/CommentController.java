@@ -48,10 +48,7 @@ public class CommentController {
 
     @GetMapping (path = "/user/applications/getcomments", produces = MediaType.APPLICATION_JSON_VALUE)
     public @ResponseBody String getCommentsByAppId(@RequestBody String application) throws FileNotFoundException, SQLException, JSONException {
-        //JSONArray jsonArray = new JSONArray(application);
-        //JSONObject obj = jsonArray.getJSONObject(0);
-        //int application_id = application.getInt("application_id");
-        //int user_id= service.getLoggedUser().getId();
+
         int application_id = Integer.parseInt(application);
         int user_id= service.getLoggedUser().getId();
         JSONArray s = DBService.getCommentsByAppId(application_id, user_id);

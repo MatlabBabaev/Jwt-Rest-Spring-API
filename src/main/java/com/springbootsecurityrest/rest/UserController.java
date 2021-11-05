@@ -40,7 +40,7 @@ public class UserController {
         JSONObject obj = jsonArray.getJSONObject(0);
         String firstname= obj.getString("firstname");
         String lastname= obj.getString("lastname");
-        String password = obj.getString("password");
+        String password = service.hashPassword(obj.getString("password"));
         String login = obj.getString("login");
         int age = obj.getInt("age");
         String address = obj.getString("address");
@@ -57,13 +57,16 @@ public class UserController {
         int id = obj.getInt("id");
         String firstname= obj.getString("firstname");
         String lastname= obj.getString("lastname");
-        String password = obj.getString("password");
+        String password = service.hashPassword(obj.getString("password"));
         String login = obj.getString("login");
         int age = obj.getInt("age");
         String address = obj.getString("address");
         String role = obj.getString("role");
-        String insertInfo = DBService.updateUser(id,login, password, firstname, lastname, age, address, role);
-        return insertInfo;
+        if(service.getLoggedUser().getId()==id){
+            String insertInfo = DBService.updateUser(id,login, password, firstname, lastname, age, address, role);
+            return insertInfo;
+        }
+        return "Something went wrong. Check the format again. Make double sure you are updating your details.";
     }
 
 }
