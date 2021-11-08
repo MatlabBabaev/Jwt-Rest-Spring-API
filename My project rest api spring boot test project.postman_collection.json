@@ -1,0 +1,539 @@
+{
+	"info": {
+		"_postman_id": "a17ae55b-fa90-4aa9-87be-ead2a310bec2",
+		"name": "My project rest api spring boot test project",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json"
+	},
+	"item": [
+		{
+			"name": "getUsers",
+			"request": {
+				"auth": {
+					"type": "basic",
+					"basic": [
+						{
+							"key": "password",
+							"value": "1234",
+							"type": "string"
+						},
+						{
+							"key": "username",
+							"value": "toxa",
+							"type": "string"
+						}
+					]
+				},
+				"method": "GET",
+				"header": [
+					{
+						"key": "x-csrf-token",
+						"value": "eyJhbGciOiJIUzI1NiJ9.eyJqdGkiOiIzZTlmNTIxYTljMzM0MmMyYmY3YjM5ZGQzZmU3NGQ1NiIsImlhdCI6MTYzNTk3NTMwMSwibmJmIjoxNjM1OTc1MzAxLCJleHAiOjE2MzU5NzcxMDF9.wWrKwX5Mo_fRYFvmEJLomPRk_kkfaDok697Q4HVj11U",
+						"type": "text"
+					}
+				],
+				"url": {
+					"raw": "http://localhost:8080/users",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8080",
+					"path": [
+						"users"
+					],
+					"query": [
+						{
+							"key": null,
+							"value": "eyJhbGciOiJIUzI1NiJ9.eyJqdGkiOiIxYjY5ZjQyMWM3NTM0YTFiOGIzMDg1N2M5NGRmNDRiZSIsImlhdCI6MTYzNTkyODQyMywibmJmIjoxNjM1OTI4NDIzLCJleHAiOjE2MzU5MzAyMjN9.PBphGwe6L8uKx21L8jFc3_Xq-BEHYjy9JICUP4MPNdM",
+							"disabled": true
+						}
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "getAllComments",
+			"request": {
+				"auth": {
+					"type": "basic",
+					"basic": [
+						{
+							"key": "password",
+							"value": "1234",
+							"type": "string"
+						},
+						{
+							"key": "username",
+							"value": "toxa",
+							"type": "string"
+						}
+					]
+				},
+				"method": "GET",
+				"header": [
+					{
+						"key": "x-csrf-token",
+						"value": "eyJhbGciOiJIUzI1NiJ9.eyJqdGkiOiJkNzVhMjQzZDEwNGM0Y2JlOGM4YTRlZTAwMmZiZjg3ZCIsImlhdCI6MTYzNjEyNzMzNiwibmJmIjoxNjM2MTI3MzM2LCJleHAiOjE2MzYxMjkxMzZ9.9G77hDoABIsKEGnDxyyjvV89ovoCERi7p7LTVEaSJrw",
+						"type": "text"
+					}
+				],
+				"url": {
+					"raw": "http://localhost:8080/admin/getallcomments",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8080",
+					"path": [
+						"admin",
+						"getallcomments"
+					],
+					"query": [
+						{
+							"key": null,
+							"value": "eyJhbGciOiJIUzI1NiJ9.eyJqdGkiOiI3NDBiYjI4N2UzNzI0NDQyYTA3MWQxZWY3ZmJmYmE2YiIsImlhdCI6MTYzNjEyNzg4MCwibmJmIjoxNjM2MTI3ODgwLCJleHAiOjE2MzYxMjk2ODB9.Zww3hhoaZxQo6ndje7yDVZ28mVJa7uTyEorv2PPY7kU",
+							"disabled": true
+						}
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "postAuth",
+			"request": {
+				"auth": {
+					"type": "basic",
+					"basic": [
+						{
+							"key": "password",
+							"value": "1234",
+							"type": "string"
+						},
+						{
+							"key": "username",
+							"value": "Mamur",
+							"type": "string"
+						}
+					]
+				},
+				"method": "POST",
+				"header": [],
+				"url": {
+					"raw": "http://localhost:8080/auth/login",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8080",
+					"path": [
+						"auth",
+						"login"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "postAddUser",
+			"request": {
+				"auth": {
+					"type": "basic",
+					"basic": [
+						{
+							"key": "password",
+							"value": "1234",
+							"type": "string"
+						},
+						{
+							"key": "username",
+							"value": "toxa",
+							"type": "string"
+						}
+					]
+				},
+				"method": "POST",
+				"header": [
+					{
+						"key": "x-csrf-token",
+						"value": "eyJhbGciOiJIUzI1NiJ9.eyJqdGkiOiIwOWMzM2I0ZGQ5MTY0N2U0YTE1Y2E1YmUzMTgwNWQzOSIsImlhdCI6MTYzNTkyODUzMywibmJmIjoxNjM1OTI4NTMzLCJleHAiOjE2MzU5MzAzMzN9.fwE_W3lgJ-W21CMBNbdz-aa-412i93qEA6cORtRWoh4",
+						"type": "text"
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "{    \"login\": \"Alis\",\r\n    \"password\": \"1234\",\r\n    \"firstname\": \"Alisher\",\r\n    \"lastname\": \"Batirov\",\r\n    \"age\": 25,\r\n    \"address\": \"Fidokorlar\",\r\n    \"role\": \"admin\"\r\n    }",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://localhost:8080/adduser",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8080",
+					"path": [
+						"adduser"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "postAddComment",
+			"request": {
+				"auth": {
+					"type": "basic",
+					"basic": [
+						{
+							"key": "password",
+							"value": "1234",
+							"type": "string"
+						},
+						{
+							"key": "username",
+							"value": "Mamur",
+							"type": "string"
+						}
+					]
+				},
+				"method": "POST",
+				"header": [
+					{
+						"key": "x-csrf-token",
+						"type": "text",
+						"value": "eyJhbGciOiJIUzI1NiJ9.eyJqdGkiOiIyZTI1OTczNzYxZjQ0MzJiYWQxNTFmMTE4YjE0ODg0MSIsImlhdCI6MTYzNjEyODY4NCwibmJmIjoxNjM2MTI4Njg0LCJleHAiOjE2MzYxMzA0ODR9.n9dexogLdjyqy8vJjCgpM11dh32tCr-kt85Y1Iq9hTI"
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "[   {\r\n        \"application_id\": 4,\r\n        \"text\": \"Your subject has been withdrawn. Please contact study department to re-join the group\"\r\n    }\r\n]",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://localhost:8080/addcomment",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8080",
+					"path": [
+						"addcomment"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "getCommentsById",
+			"request": {
+				"auth": {
+					"type": "basic",
+					"basic": [
+						{
+							"key": "password",
+							"value": "1234",
+							"type": "string"
+						},
+						{
+							"key": "username",
+							"value": "Mamur",
+							"type": "string"
+						}
+					]
+				},
+				"method": "POST",
+				"header": [
+					{
+						"key": "x-csrf-token",
+						"type": "text",
+						"value": "eyJhbGciOiJIUzI1NiJ9.eyJqdGkiOiIyZTI1OTczNzYxZjQ0MzJiYWQxNTFmMTE4YjE0ODg0MSIsImlhdCI6MTYzNjEyODY4NCwibmJmIjoxNjM2MTI4Njg0LCJleHAiOjE2MzYxMzA0ODR9.n9dexogLdjyqy8vJjCgpM11dh32tCr-kt85Y1Iq9hTI"
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "[   {\r\n        \"application_id\": 8\r\n    }\r\n]",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://localhost:8080/user/applications/getcomments",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8080",
+					"path": [
+						"user",
+						"applications",
+						"getcomments"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "getQueries",
+			"protocolProfileBehavior": {
+				"disableBodyPruning": true
+			},
+			"request": {
+				"auth": {
+					"type": "basic",
+					"basic": [
+						{
+							"key": "password",
+							"value": "1234",
+							"type": "string"
+						},
+						{
+							"key": "username",
+							"value": "Alis",
+							"type": "string"
+						}
+					]
+				},
+				"method": "GET",
+				"header": [
+					{
+						"key": "x-csrf-token",
+						"value": "eyJhbGciOiJIUzI1NiJ9.eyJqdGkiOiI4NDYzMDFhMmI5ZTI0ZWQyOWRhMDRkYjVmMjY3ZWM4NyIsImlhdCI6MTYzNjAyOTgwNSwibmJmIjoxNjM2MDI5ODA1LCJleHAiOjE2MzYwMzE2MDV9.vOhGNK_eFai_WFi7U8dtQ6FUr2nq111sTJg8H5FHEME",
+						"type": "text"
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://localhost:8080/queries",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8080",
+					"path": [
+						"queries"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "CreateQueriy",
+			"request": {
+				"auth": {
+					"type": "basic",
+					"basic": [
+						{
+							"key": "password",
+							"value": "1234",
+							"type": "string"
+						},
+						{
+							"key": "username",
+							"value": "Mamur",
+							"type": "string"
+						}
+					]
+				},
+				"method": "POST",
+				"header": [
+					{
+						"key": "x-csrf-token",
+						"type": "text",
+						"value": "eyJhbGciOiJIUzI1NiJ9.eyJqdGkiOiI4NDA3OTZlZDQ1NTQ0NDI2YTk5NzA5YTkzZWQzMWFjZiIsImlhdCI6MTYzNTk5NjE4MSwibmJmIjoxNjM1OTk2MTgxLCJleHAiOjE2MzU5OTc5ODF9.Zx3v2VRosCePswmr3haAVg6dY9zRtAbbH-e5IsWtSkE"
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "[{\r\n        \"header\": \"coding issue\",\r\n        \"body\": \"Fix it immediately fucking cunt\"\r\n    }\r\n]",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://localhost:8080/createquery",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8080",
+					"path": [
+						"createquery"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "postUpdateUser",
+			"request": {
+				"auth": {
+					"type": "basic",
+					"basic": [
+						{
+							"key": "username",
+							"value": "maxx",
+							"type": "string"
+						},
+						{
+							"key": "password",
+							"value": "1234",
+							"type": "string"
+						}
+					]
+				},
+				"method": "POST",
+				"header": [
+					{
+						"key": "x-csrf-token",
+						"value": "eyJhbGciOiJIUzI1NiJ9.eyJqdGkiOiI3Y2Q4N2EwNTRkMmY0ZGMxYTg4Y2MzZjUzZTljNDQ1ZCIsImlhdCI6MTYzNjE0MTAwOSwibmJmIjoxNjM2MTQxMDA5LCJleHAiOjE2MzYxNDI4MDl9.i72pWrkOmHg_6yAXUDvWKJSKpwWIbPeV6JaCDAWbQpM",
+						"type": "text"
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "[    {\r\n        \"id\": 4,\r\n        \"login\": \"maxx\",\r\n        \"password\": \"bulshit\",\r\n        \"firstname\": \"Maxii\",\r\n        \"lastname\": \"Rodri\",\r\n        \"age\": 29,\r\n        \"address\": \"Yakkasaray 52\",\r\n        \"role\": \"user\"\r\n    }\r\n]",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://localhost:8080/upduser",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8080",
+					"path": [
+						"upduser"
+					]
+				},
+				"description": "ssd"
+			},
+			"response": []
+		},
+		{
+			"name": "postUpdateQuery",
+			"request": {
+				"auth": {
+					"type": "basic",
+					"basic": [
+						{
+							"key": "password",
+							"value": "1234",
+							"type": "string"
+						},
+						{
+							"key": "username",
+							"value": "Mamur",
+							"type": "string"
+						}
+					]
+				},
+				"method": "POST",
+				"header": [
+					{
+						"key": "x-csrf-token",
+						"type": "text",
+						"value": "eyJhbGciOiJIUzI1NiJ9.eyJqdGkiOiIxYWMyZDdkMTI4ZDY0YWMzODk1NTJjNGVlZGNjOWZkNiIsImlhdCI6MTYzNjAzNjU2MiwibmJmIjoxNjM2MDM2NTYyLCJleHAiOjE2MzYwMzgzNjJ9.4k3cdizOQu9tb9UE_XAE5FyZE-I6mHJH8x7gfDshNBg"
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "[      {\r\n        \"id\": 5,\r\n        \"user_id\": 6,\r\n        \"header\": \"Job seeking\",\r\n        \"body\": \"Hey I need a job, give me a job\",\r\n        \"createdDate\": \"2021-11-04\"\r\n    }\r\n]",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://localhost:8080/updquery",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8080",
+					"path": [
+						"updquery"
+					]
+				},
+				"description": "ssd"
+			},
+			"response": []
+		},
+		{
+			"name": "postDeleteQuery",
+			"request": {
+				"auth": {
+					"type": "basic",
+					"basic": [
+						{
+							"key": "username",
+							"value": "Alis",
+							"type": "string"
+						},
+						{
+							"key": "password",
+							"value": "1234",
+							"type": "string"
+						}
+					]
+				},
+				"method": "POST",
+				"header": [
+					{
+						"key": "x-csrf-token",
+						"type": "text",
+						"value": "eyJhbGciOiJIUzI1NiJ9.eyJqdGkiOiIzMzRiYjgxYjgxMGU0NGU0YTBkODk2MDJmNzAyZDYyNSIsImlhdCI6MTYzNjA1NTU5OSwibmJmIjoxNjM2MDU1NTk5LCJleHAiOjE2MzYwNTczOTl9.QdNmh0jWdK8GNFjCKwI7TLwC5oqMi4-mvkvFtGLySC4"
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "[\r\n    {\r\n        \"id\": 5,\r\n        \"user_id\": 6,\r\n        \"header\": \"Job seeking\",\r\n        \"body\": \"Hey I need a job, give me a job\",\r\n        \"createdDate\": \"2021-11-04\"\r\n    }\r\n]",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://localhost:8080/deletequery",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8080",
+					"path": [
+						"deletequery"
+					]
+				},
+				"description": "ssd"
+			},
+			"response": []
+		}
+	]
+}
